@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Reset default margins, paddings, and box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Improve typography and line height */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  /* Remove list styles */
+  ul, ol {
+    list-style: none;
+  }
+
+  /* Remove underlines from links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Ensure images are responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Remove outline on focus (but keep accessibility for keyboard users) */
+  button, input, textarea {
+    font-family: inherit;
+    border: none;
+    outline: none;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Set up a basic flex container (optional) */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
