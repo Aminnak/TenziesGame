@@ -56,11 +56,16 @@ function App() {
                     h-[500px] rounded-2xl max-sm:w-[400px] max-sm:h-[400px]
         `)}>
 
-            <div className='flex flex-col space-y-5'>
+            <div className='flex flex-col justify-center items-center text-center space-y-5 max-md:px-3'>
                 <h1 className="font-bold text-4xl">Tenzies</h1>
                 <p className="max-w-md font-sans font-medium">
-                    Roll until all dice are the same.
-                    Click each die to freeze it at its current value between rolls.
+                    {
+                    !gameWon ?
+                    `Roll until all dice are the same.
+                    Click each die to freeze it at its
+                    current value between rolls.`
+                    : 'Congratulations, YOU WON!'
+                }
                 </p>
             </div>
 
