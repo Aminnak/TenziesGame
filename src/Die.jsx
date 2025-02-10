@@ -1,8 +1,15 @@
 import React from 'react'
+import clsx from 'clsx'
 
-const Die = ({ value }) => {
+const Die = ({ value , isHeld , diceHoldStatus }) => {
   return (
-    <button className='w-[50px] h-[50px] rounded-lg shadow-lg bg-white font-bold text-xl cursor-pointer'>{value}</button>
-)
+        <button onClick={() => diceHoldStatus()} className={
+            clsx(
+                `w-[50px] h-[50px] rounded-lg shadow-lg font-bold text-xl cursor-pointer`,
+                isHeld ? 'bg-emerald-500' : 'bg-white'
+            )}>
+            {value}
+        </button>
+    )
 }
 export default Die
