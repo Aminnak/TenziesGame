@@ -1,9 +1,10 @@
-import './App.css'
-import Die from './Die'
-import Confetti from 'react-confetti'
 import { useWindowSize } from 'react-use'
 import { nanoid } from 'nanoid'
 import { useState } from 'react'
+import { clsx } from 'clsx'
+import Die from './Die'
+import Confetti from 'react-confetti'
+import './App.css'
 
 
 function App() {
@@ -49,26 +50,35 @@ function App() {
   return (
     <>
         {gameWon && <Confetti width={width} height={height}/>}
-        <main className='
-            flex flex-col justify-evenly items-center
-            bg-stone-100 w-[500px] h-[500px] rounded-2xl
-            max-sm:w-[400px] max-sm:h-[400px]'
-            >
+        <main
+            className={
+                clsx(`
+                    flex flex-col justify-evenly items-center bg-stone-100 w-[500px]
+                    h-[500px] rounded-2xl max-sm:w-[400px] max-sm:h-[400px]
+        `)}>
+
             <div className='flex flex-col space-y-5'>
                 <h1 className="font-bold text-4xl">Tenzies</h1>
                 <p className="max-w-md font-sans font-medium">
-                    Roll until all dice are the same. Click each die to freeze it at its current value between rolls.
+                    Roll until all dice are the same.
+                    Click each die to freeze it at its current value between rolls.
                 </p>
             </div>
+
             <div className='grid grid-cols-5 gap-4'>
                 {diceElement}
             </div>
 
-            {!gameWon && <button className='bg-indigo-600 px-8 py-2 text-white rounded-lg'  onClick={diceNewValue}>
+            {!gameWon &&
+            <button className='bg-indigo-600 px-8 py-2 text-white rounded-lg'
+                onClick={diceNewValue}>
                 Roll
             </button>}
 
-            {gameWon && <button className='bg-indigo-600 px-8 py-2 text-white rounded-lg'  onClick={() => setDice(generateAllNewDice())}>
+            {gameWon &&
+            <button
+                className='bg-indigo-600 px-8 py-2 text-white rounded-lg'
+                onClick={() => setDice(generateAllNewDice())}>
                 New Game
             </button>}
         </main>

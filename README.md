@@ -8,9 +8,10 @@ Features:
 - Clean and interactive interface.
 
 Technologies Used:
--React for building the user interface.
--Tailwind CSS for styling the game.
--Vite for fast development setup.
+
+- React for building the user interface.
+- Tailwind CSS for styling the game.
+- Vite for fast development setup.
 
 How to Play:
 1. Click on the dice to freeze them in place.
