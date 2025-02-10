@@ -13,7 +13,6 @@ function App() {
     const gameWon = dice.every(die => die.value === dice[0].value) && dice.every(die => die.isHeld)
 
     function generateAllNewDice() {
-        console.log('func ran')
         return new Array(10)
             .fill(0)
             .map(() => ({
