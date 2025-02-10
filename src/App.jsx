@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { clsx } from 'clsx'
 import Die from './Die'
 import Confetti from 'react-confetti'
-import './App.css'
 
 
 function App() {
